@@ -1,4 +1,4 @@
-# 🚀 GabrielSQL Database Engine
+# 🚀 SQL Database 
 
 <div align="center">
 
@@ -35,7 +35,7 @@ O objetivo é demonstrar como bancos de dados relacionais (como MySQL ou Postgre
 O projeto segue uma arquitetura modular, separando a lógica de armazenamento da interface do usuário.
 
 ```text
-GabrielSQL/
+SQL/
 │
 ├── Main.py                  # 🏁 Ponto de entrada (Console SQL Interativo)
 │
