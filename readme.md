@@ -51,7 +51,7 @@ GabrielSQL/
 └── Analise/                 # 📊 Ferramentas de Teste & Benchmark
     ├── main_analise.py      # Executor de Benchmarks automatizados
     └── funcoes/             # Geradores de dados e auditores de estrutura
-
+```
 ---
 
 ## 🛠️ Detalhes Técnicos
@@ -81,7 +81,7 @@ Certifique-se de ter o **Python 3.x** instalado. Não é necessário instalar bi
 Execute na raiz do projeto para abrir o terminal do banco de dados:
 ```bash
 python Main.py
-
+```
 
 ### 2. Modo Benchmark (Teste de Stress)
 
@@ -89,28 +89,30 @@ Para ver a árvore processando grandes volumes e gerar relatórios de performanc
 
 ```bash
 python Analise/main_analise.py
+```
+
 🧪 Teste Rápido (SQL)
 Copie e cole a sequência abaixo no console do Main.py para testar todas as funcionalidades:
 
 ##1. Criar uma tabela:
 ```sql
 CREATE TABLE usuarios (id INT PRIMARY KEY, nome STR, cargo STR)
-
+```
 ##2. Inserir dados (Auto-Increment ativado com NULL):
 
 ```sql
 INSERT INTO usuarios VALUES (NULL, Gabriel, Admin)
-
+```
 
 ```sql
 INSERT INTO usuarios VALUES (NULL, Ana, Developer)
-
+```
 ##3. Buscar um registro pela Chave Primária:
 
 
 ```sql
 SELECT * FROM usuarios WHERE id = 1
-
+```
 
 Resultado Esperado: Você verá logs de [DISK] e [STATS] mostrando exatamente quantas leituras e escritas foram necessárias no disco físico para realizar cada operação.
 
@@ -123,5 +125,5 @@ OPERAÇÃO        | QTD      | MÉDIA (s)
 ---------------------------------------
 INSERT          | 1000     | 0.000712     
 SELECT_PK       | 1000     | 0.000176 
-    
+
 Nota: O SELECT é drasticamente mais rápido que o INSERT, comprovando a eficiência da estrutura B+ Tree para leitura de dados.
