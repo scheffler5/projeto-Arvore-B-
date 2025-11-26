@@ -121,9 +121,11 @@ Exemplo de output do módulo de análise:
 
 Plaintext
 
+```text
 OPERAÇÃO        | QTD      | MÉDIA (s)    
 ---------------------------------------
 INSERT          | 1000     | 0.000712     
 SELECT_PK       | 1000     | 0.000176 
+```
 
 Nota: O SELECT é drasticamente mais rápido que o INSERT, comprovando a eficiência da estrutura B+ Tree para leitura de dados.
