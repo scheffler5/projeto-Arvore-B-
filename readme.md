@@ -51,7 +51,8 @@ SQL/
 └── Analise/                 # 📊 Ferramentas de Teste & Benchmark
     ├── main_analise.py      # Executor de Benchmarks automatizados
     └── funcoes/             # Geradores de dados e auditores de estrutura
-    
+```
+
 
 graph TD
     %% Estilos
