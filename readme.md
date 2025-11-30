@@ -52,34 +52,7 @@ SQL/
     ├── main_analise.py      # Executor de Benchmarks automatizados
     └── funcoes/             # Geradores de dados e auditores de estrutura
 ```
-
-
-graph TD
-    %% Estilos
-    classDef logic fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef memory fill:#bfb,stroke:#333,stroke-width:2px;
-    classDef storage fill:#bbf,stroke:#333,stroke-width:2px;
-    classDef file fill:#ddd,stroke:#333,stroke-width:2px,shape:cylinder;
-
-    User[Main / Processor] -->|1. insert data| Tree(bplustree.py):::logic
-    
-    subgraph "Motor de Armazenamento"
-        Tree -->|2. Pede página X| Disk(disk_manager.py):::storage
-        Disk -->|3. Lê bytes| DB[(arquivo.db)]:::file
-        DB -->|4. Retorna bytes| Disk
-        Disk -->|5. Entrega bytes| Tree
-        
-        Tree -->|6. Envia bytes| Node(node.py):::memory
-        Node -->|7. Converte em Objeto| Tree
-        
-        Tree -->|8. Lógica de Split/Ordenação| Tree
-        
-        Tree -->|9. Envia Objeto| Node
-        Node -->|10. Serializa para Bytes| Tree
-        
-        Tree -->|11. Grava Página X| Disk
-        Disk -->|12. Persiste| DB
-    end
+---
 
 ## 🛠️ Detalhes Técnicos
 
