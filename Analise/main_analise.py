@@ -59,7 +59,7 @@ def main():
             tree.insert(dados)
             tracker.stop('INSERT')
     
-    print("\n✅ Povoamento concluído.")
+    print("\n Povoamento concluído.")
 
     # Consulta
     print(f"\n[INICIANDO] Realizando {qtd_selects} consultas aleatórias...")
