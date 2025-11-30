@@ -51,8 +51,8 @@ SQL/
 └── Analise/                 # 📊 Ferramentas de Teste & Benchmark
     ├── main_analise.py      # Executor de Benchmarks automatizados
     └── funcoes/             # Geradores de dados e auditores de estrutura
-```
----
+    
+
 graph TD
     %% Estilos
     classDef logic fill:#f9f,stroke:#333,stroke-width:2px;
